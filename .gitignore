@@ -1,0 +1,11 @@
+# Build artefacts
+*.o
+*.ko
+*.cmd
+*.o.d
+
+# Module stuff
+*.mod.c
+.tmp_versions/
+modules.order
+Module.symvers
