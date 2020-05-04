@@ -1,0 +1,13 @@
+Measured time of writing to the device in user space.
+''' With spinlock
+time echo hi | sudo tee /dev/chardev_dev
+hi
+echo hi  0.00s user 0.00s system 40% cpu 0.000 total
+sudo tee /dev/chardev_dev  0.00s user 0.00s system 57% cpu 0.009 total
+'''
+''' With mutex
+time echo hi | sudo tee /dev/chardev_dev
+hi
+echo hi  0.00s user 0.00s system 43% cpu 0.000 total
+sudo tee /dev/chardev_dev  0.00s user 0.00s system 0% cpu 0.465 total
+'''
